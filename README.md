@@ -3,6 +3,22 @@ In this paper I introduce a new oral lesion database that I created by scraping 
 
 <img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/ALL_AUG_samples.PNG?raw=true"></img>
 
+# Can you accurately classify oral lesions?
+<table>
+  <tbody>
+    <tr>
+    <td> <img src=""></img></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td> <img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/herpessimplex_101_2.png?raw=true"></img></td>
+    <td></td>
+    <td></td>
+    </tr>
+  </tbody>
+  </table>
+
 # A novel classifcation model:
 <table>
   <tbody>
