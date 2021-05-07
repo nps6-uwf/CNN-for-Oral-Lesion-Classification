@@ -11,28 +11,6 @@
 # scheme.
 # 2. can choose between various classification schemes
 #---------------------------------------------------------------------------------
-
-"""
-
-# Image augmentor
-# source: https://www.kdnuggets.com/2020/02/easy-image-dataset-augmentation-tensorflow.html
-train_datagen = ImageDataGenerator(
-      rotation_range=20,
-      width_shift_range=0.2,
-      height_shift_range=0.2,
-      shear_range=0.2,
-      zoom_range=0.2,
-      horizontal_flip=True,
-      vertical_flip=True,
-      fill_mode='nearest')
-
-history = model.fit_generator(
-      train_generator,
-      steps_per_epoch=100,
-      epochs=100,
-      verbose=2)
-"""
-
 # -1) Imports
 import numpy as np
 import os
