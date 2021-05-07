@@ -29,7 +29,11 @@ In this paper I introduce a new oral lesion database that I created by scraping 
   </tbody>
 </table>
 
-
 # Interesting Ideas for Future research
 <ol>
+  <li>Apply tranfer learning via a neaural network trained on a large high quality skin lesion database such as HAM10000.</li>
+  <li>Use state of the art object detection algorithms sucha as yolo and faster-R-cnn to automate lesion data collection process from online journals.</li>
+  <li>Compare classifcation accuracy between whole images of the mouth (containing an oral lesion) and the image broken up into arbitrarily small fragments.</li>
+  <li>Use generative algorithms to generate lesions images, use cutom algorithm to affix the newly created lesion image onto an image of a mouth.</li>
+  <li>Expand teh oral lesion database, add new types of lesions, design complex ensemble structures to achieve high classifcation accuracy.</li>
 </ol>
