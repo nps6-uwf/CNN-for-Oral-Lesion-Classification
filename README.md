@@ -14,7 +14,7 @@ In this paper I introduce a new oral lesion database that I created by scraping 
     <tr>
     <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/herpessimplex_101_2.png?raw=true"></img></td>
     <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/squamouscellcarcinoma_normalized_33_1.png?raw=true"></img></td>
-    <td><img src=""></img></td>
+    <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/herpessimplex_77_3.png?raw=true"></img></td>
     </tr>
   </tbody>
   </table>
