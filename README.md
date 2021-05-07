@@ -7,14 +7,14 @@ In this paper I introduce a new oral lesion database that I created by scraping 
 <table>
   <tbody>
     <tr>
-    <td> <img src=""></img></td>
-    <td></td>
-    <td></td>
+    <td><strong>Herpes</strong></td>
+    <td><strong>Squamous Cell Carcinoma</strong></td>
+    <td><strong>???</strong></td>
     </tr>
     <tr>
-    <td> <img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/herpessimplex_101_2.png?raw=true"></img></td>
-    <td></td>
-    <td></td>
+    <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/herpessimplex_101_2.png?raw=true"></img></td>
+    <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/squamouscellcarcinoma_normalized_33_1.png?raw=true"></img></td>
+    <td><img src=""></img></td>
     </tr>
   </tbody>
   </table>
