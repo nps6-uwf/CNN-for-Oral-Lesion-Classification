@@ -7,7 +7,7 @@ In this paper I introduce a new oral lesion database that I created by scraping 
 <table>
   <tbody>
   <tr>
-    <td><img src=""></img></td>
+    <td><img src="https://github.com/nps6-uwf/CNN-for-Oral-Lesion-Classification/blob/main/project%20figures/binary_ensemble_resnet.PNG?raw=true"></img></td>
     <td><img src=""></img></td>
   </tr>
   </tbody>
