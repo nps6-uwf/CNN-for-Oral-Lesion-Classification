@@ -1,15 +1,73 @@
+# Author: Nick Sebasco
+# Version: 1
+# Purpose: CNN architecures class, confusion matrix class, and a reference model class.
+
 import numpy as np
 import tensorflow as tf
 from tensorflow import keras
 from tensorflow.keras import layers
 from tensorflow.keras.models import Sequential
 
+class ConfusionMatrix:
+    """Instantiate a new data structure, a confusion matrix, which can be used to 
+    assess the accuracy of classifications.  Particularly useful for multiclass
+    classification because it elucidates the specific classification error that 
+    occurred.  This datastructure is built on top of an np.array.
+    """
+    def __init__(self, class_names: list, nameLengthLimit: int = 4):
+        self.class_names = class_names
+        self.nameLengthLimit = nameLengthLimit
+        self.ERR = {i if len(i) <= nameLengthLimit else i[:4]:{"total":0, "actual":0} for i in class_names}
+        self.matrix = np.zeros((len(class_names) + 1, len(class_names) + 1), dtype='object')
+        for i, label in enumerate(class_names):
+            self.matrix[0, i + 1] = label[:nameLengthLimit]
+            self.matrix[i+1, 0] = label[:nameLengthLimit]
+        self.pad_matrix()
+        self.set_top_left_brick()
+
+    def __repr__(self):
+        return f"{self.matrix}"
+
+    def set_top_left_brick(self, char: str = "x"):
+        """set upper left corner of matrix to a unique set of characters.
+        for design pupose only (non essential).
+        """
+        self.matrix[0,0] = "".join([char for i in list(self.matrix[0,0])])
+    
+    def max_length(self) -> int:
+        """Find element with max length in matrix.
+        """
+        return max([len(str(i)) for i in self.matrix.flatten()])
+
+    def pad_cell(self, idx, char=" "):
+        """ pad a single matrix element with:
+        len(element with max length) - len(ith element) spaces (chars).
+        """
+        self.matrix[idx] = str(self.matrix[idx]).strip()
+        self.matrix[idx] = str(self.matrix[idx]) + char * (self.max_length() - len(str(self.matrix[idx])))
+
+    def pad_matrix(self, char: str = " "):
+        """ pad matrix elements with:
+        len(element with max length) - len(ith element) spaces.
+        """
+        for i in range(self.matrix.shape[0]):
+            for j in range(self.matrix.shape[1]):
+                self.pad_cell((i,j), char=char)
+
+    def increment(self, label: str, key: str):
+        self.ERR[label[:self.nameLengthLimit]][key] += 1
+
+    def increment_matrix(self, key: str, value: str):
+        idx = (self.class_names.index(key) + 1, self.class_names.index(value) + 1)
+        self.matrix[idx] = int(self.matrix[idx])+1
+        self.pad_cell(idx)
+
 class ReferenceModel:
     """This class will serve as a reference to compare my models too.
     simple predictions strategies will be defined here.  The CNN's prediction
     accuracy should perform better than these methods
     """
-    def __init__(self, classes):
+    def __init__(self, classes: list):
         self.classes = classes
     def random_predict(self):
         return np.random.choice(self.classes)
