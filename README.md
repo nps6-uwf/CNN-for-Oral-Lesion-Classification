@@ -39,4 +39,4 @@ In this paper I introduce a new oral lesion database that I created by scraping 
 </ol>
 
 # Link to Paper:
-<a href="https://docs.google.com/document/d/1D-lKCRJTVxpOz_hiG894c6aR0FUbq7wTq9mUn5uE02o/edit?usp=sharing">Paper</a>
+<a href="https://docs.google.com/document/d/17YDSYmOFPKkMJS1yUsj29nJ1uJwd_z0ZvILiAL35vUg/edit?usp=sharing">Paper</a>
